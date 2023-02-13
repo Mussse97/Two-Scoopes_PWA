@@ -1,0 +1,20 @@
+{
+    "name": "Pwa training",
+    "short_name": "Pwa training",
+    "start_url": ".",
+    "background_color": "#6dcdb1",
+    "theme_color": "#009578",
+    "display": "standalone",
+    "icons": [
+        {
+           "src": "images/piano3.png",
+           "sizes": "512x512",
+           "type": "image/png"
+        },
+        {
+            "src": "images/piano192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+         }
+    ]
+}
