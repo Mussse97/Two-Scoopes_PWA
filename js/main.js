@@ -15,9 +15,9 @@ try {
   accelerometer.onerror = (event) => {
     // Handle runtime errors.
     if (event.error.name === 'NotAllowedError') {
-      console.log('Permission to access sensor was denied.');
+      alert('Permission to access sensor was denied.');
     } else if (event.error.name === 'NotReadableError') {
-      console.log('Cannot connect to the sensor.');
+      alert('Cannot connect to the sensor.');
     }
   };
   accelerometer.onreading = (e) => {
