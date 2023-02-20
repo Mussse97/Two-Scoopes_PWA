@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-transform: capitalize;
+    transition: 0.2s;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif
+}
+body{
+    width: 100%;
+}
+
+.header{
+    padding: 1rem 7%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,.6);
+    z-index: 100;
+    width: 100%;
+   
+}
+/* Navigeringsbar top*/
+span{
+    color: orangered;
+}
+
+.navbar a{
+    color: white;
+    padding: 0.5rem;
+    
+    position: relative;
+}
+.navbar a:hover{
+    color: var(--first-color);
+}
+.navbar a::after{
+    content: "";
+    background-color: var(--first-color);
+    width: 0;
+    height: 2px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: .5s;
+}
+.navbar a:hover::after{
+    width: 100%;
+    
+}
+.icons div{
+    color: white;
+    font-size: 18px;
+    display: none;
+}
+.icons a{
+    color: white;
+    border: 1px solid white;
+    padding: 0.5rem;
+    transition: .5s;
+    
+}
+
+.icons a:hover{
+    background: var(--first-color);
+    border-radius: 10px;
+
+}
+
+.home{
+    padding: 1rem 7%;
+    background-image: url(/images/blur-g3142bb1c4_1920.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    
+}
+.main-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.inner-content{
+    flex: 1 1 45rem;
+    flex-wrap: wrap;
+}
+.inner-content h1{
+    margin-top: 130px;
+    color: black;
+    font-size: 50px;
+}
+.inner-content h1 span{
+    color: var(--first-color);
+}
+.inner-content p{
+    color: orangered;
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+.body-btn a{
+    padding: 0.5rem 1.3rem;
+    background-color: black;
+    color: orangered;
+    font-size: 1.5rem;
+    transition: 0.5s;
+    
+}
+.body-btn a:hover{
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+}
