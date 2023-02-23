@@ -40,9 +40,10 @@ transform: translateX(0px);
     font-size: 20px;
     cursor: pointer;
     transition: all 0.5s;
+    
 }
 .logos{
-    background-color: black;
+    background-color: rgb(204, 127, 63);
    width: 100%;
     display: flex;
     justify-content: space-around;
@@ -50,15 +51,14 @@ transform: translateX(0px);
     padding: 20px 20px;
     border-radius: 10px;
     border: 2px solid orangered;
-
-
-    
-
-
+/*add shadow to the div element*/
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
+    margin: 20px 0;
+    transition: all 0.5s;
 
 }
 img{
-    width: 100px;
+    width: 50px;
     height: 100px;
 }
 .logo:nth-child(2){
