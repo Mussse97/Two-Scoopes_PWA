@@ -12,41 +12,10 @@ function handleOrientation(event){
     //var output=document.getElementById("output");
     //simpleOutput(event, output);
     
-    var canvas=document.getElementById("canvas_output");
-    betterOutput(event, canvas);
-}
-
-function simpleOutput(event, div){
-    var properties="";
-    for(var prop in event){
-        properties+=prop+": "+event[prop]+"<br>";
-        
-    }
-    div.innerHTML=properties;
-    
-}
-
-function betterOutput(event, canvas){
-    canvas.width=window.innerWidth;
-    canvas.height=window.innerHeight;
-    var context=canvas.getContext("2d");
-    var radius=Math.min(canvas.width,canvas.height)/10;
-    
-    var location0={
-        x:canvas.width/2,
-        y:canvas.height/2
-    }
-    
-    var location={
-        x:location0.x,
-        y:location0.y+event["beta"]*3
-    }
-    
-    context.beginPath();
-    context.arc(location.x,location.y,radius,0,2*Math.PI);
-    context.stroke();
     counteUp(event);
 }
+
+
 
 var  counter = 0
 //check if event.gamma is less than -88 and if it is then count up to 10, for it to count up again event.gamma needs to be greater than -2 and then less than -88 again
@@ -56,6 +25,12 @@ function counteUp(event){
             counter++;
             document.getElementById("results").innerHTML = counter;
             vibrate();
+            document.getElementById("results").style.fontSize = "200px";
+            // everytime the counter goes up make the body element border turn green and then back to original color
+
+            document.body.style.border = "5px solid green";
+            setTimeout(function(){ document.body.style.border = "5px solid orangered"; }, 500);
+
         }
     }
 }
@@ -65,8 +40,10 @@ function vibrate(){
     if(counter == 10){
         navigator.vibrate(100);
         navigator.vibrate(100);
-        var canvas=document.getElementById("canvas_output");
-    canvas.style.background = "green";
+        document.getElementById("results").style.backgroundColor = "green";
+        document.getElementById("results").innerHTML = "✓";
+        document.getElementById("congratz").innerHTML = "Congratz you did it!";
+        document.getElementById("congratz").style.fontSize = "80px";
     }else{
         navigator.vibrate(100);
     }

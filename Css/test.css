@@ -11,8 +11,30 @@
 body{
     width: 100%;
 }
-.test{
-    background-color: bisque;
+#results{
+    /*give the div rounded corners and a shadow*/
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background-color: orangered;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    
+}
+#test{
+    /*give the body a border color*/
+    border: 5px solid orangered;
+    background-color: rgb(54, 53, 53);
+    display: grid;
+    place-items: center;
+    align-items: center;
+    min-height: 90vh;
+    font-size: 30px;
 }
 .header{
     padding: 1rem 7%;
