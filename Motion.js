@@ -1,11 +1,34 @@
-/*function init(){
-   resetBtn = document.getElementById("clickMe");
-   resetBtn.on1click = sayHi;
-   resetBtn.addEventListener("click", sayHi);
-}*/
+function init(){
+  resetBtn = document.getElementById("restartBtn");
+  resetBtn.addEventListener("click", reset);
+  selection = document.getElementById("selectionBtn");
+  resetBtn.style.display = "none";
+  selection.style.display = "none";
+  countdown();
+}
 
-//window.addEventListener("load", init);
-window.addEventListener('deviceorientation', handleOrientation);
+window.addEventListener("load", init);
+//window.addEventListener('deviceorientation', handleOrientation)
+
+// create a function that starts a countdown from 3 in the div element results before handleorientation is executed
+function countdown(){
+
+
+    var count = 5;
+    var counter = setInterval(timer, 1000);
+    function timer(){
+        count = count - 1;
+        if(count <= 0){
+            clearInterval(counter);
+            document.getElementById("results").innerHTML = "Start";
+            // make the count numbers bigger.
+            document.getElementById("results").style.fontSize = "80px";
+            return;
+        }
+        document.getElementById("results").innerHTML = count;
+        window.addEventListener('deviceorientation', handleOrientation)
+    }
+}
 
 			
 function handleOrientation(event){
@@ -44,10 +67,16 @@ function vibrate(){
         document.getElementById("results").innerHTML = "✓";
         document.getElementById("congratz").innerHTML = "Congratz you did it!";
         document.getElementById("congratz").style.fontSize = "80px";
+        resetBtn.style.display = "block";
+        selectionBtn.style.display = "block";
+        /*create two buttons were one of them restarts the countup and the other leads to choise.html*/
+       
+
     }else{
         navigator.vibrate(100);
     }
 }
 
-
-
+function reset(){
+    location.reload();
+}

@@ -33,7 +33,7 @@ body{
     display: grid;
     place-items: center;
     align-items: center;
-    min-height: 90vh;
+    min-height: 100vh;
     font-size: 30px;
 }
 .header{
@@ -141,4 +141,37 @@ span{
 .body-btn a:hover{
     padding: 0.5rem 1.5rem;
     border-radius: 10px;
+}
+
+#selectionBtn{
+    width: 550px;
+    height: 150px;
+    background-color: rgb(54, 53, 53);
+    color: white;
+    border: 2px solid orangered;
+    padding: 10px 20px;
+    font-size: 500px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-size: 50px;
+    text-align: center;
+    
+   
+}
+h1{
+    
+    font-size: 80px;
+    margin-top: 50px;
+}
+#restartBtn{
+    width: 550px;
+    height: 150px;
+    font-size: 80px;
+    background-color: rgb(54, 53, 53);
+    color: white;
+    border: 2px solid orangered;
+    padding: 10px 20px;
+    font-size: 50px;
+    cursor: pointer;
+    transition: all 0.5s;
 }
