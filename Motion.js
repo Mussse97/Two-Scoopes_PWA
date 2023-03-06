@@ -1,18 +1,34 @@
+var totalReps = 0;
+var totalSesions = 0;
+var statement = false;
 function init(){
   resetBtn = document.getElementById("restartBtn");
   resetBtn.addEventListener("click", reset);
   selection = document.getElementById("selectionBtn");
   resetBtn.style.display = "none";
   selection.style.display = "none";
-  countdown();
+  totalReps= document.getElementById("totPoints");
+  totalSesions = document.getElementById("countGames");
+  tapme();
 }
 
 window.addEventListener("load", init);
 //window.addEventListener('deviceorientation', handleOrientation)
 
-// create a function that starts a countdown from 3 in the div element results before handleorientation is executed
-function countdown(){
 
+function tapme(){
+    document.getElementById("tapme").addEventListener("click", countdown);
+    
+
+   
+    
+
+}
+
+function countdown(){
+    document.getElementById("tapme").style.display = "none";
+    document.getElementById("giffy").style.display = "none";
+    document.getElementById("Rep").innerHTML = "Reps";
 
     var count = 5;
     var counter = setInterval(timer, 1000);
@@ -46,6 +62,7 @@ function counteUp(event){
     if(event.gamma < -88){
         if(counter < 10){
             counter++;
+            statement = true;
             document.getElementById("results").innerHTML = counter;
             vibrate();
             document.getElementById("results").style.fontSize = "200px";
@@ -53,6 +70,9 @@ function counteUp(event){
 
             document.body.style.border = "5px solid green";
             setTimeout(function(){ document.body.style.border = "5px solid orangered"; }, 500);
+            // if statement is true counter cant go up anymore, counter need to be false again
+        }else{
+            statement = false;
 
         }
     }
@@ -69,8 +89,16 @@ function vibrate(){
         document.getElementById("congratz").style.fontSize = "80px";
         resetBtn.style.display = "block";
         selectionBtn.style.display = "block";
-        /*create two buttons were one of them restarts the countup and the other leads to choise.html*/
-       
+        
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var response = JSON.parse(xhttp.responseText);
+                var savedCounter = response.counter;
+                // Show the saved counter number on the page
+                document.getElementById("totalReps").innerHTML = savedCounter;
+            }
+        };
 
     }else{
         navigator.vibrate(100);
