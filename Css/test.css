@@ -158,13 +158,27 @@ span{
     
    
 }
-
-#tapme{
+#tapme2{
     width: 550px;
     height: 150px;
     background-color: rgb(54, 53, 53);
     color: white;
     border: 2px solid orangered;
+    padding: 10px 20px;
+    font-size: 500px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-size: 50px;
+    text-align: center;
+    background-color: green;
+
+}
+#tapme{
+    width: 550px;
+    height: 150px;
+    background-color: rgb(54, 53, 53);
+    color: white;
+    border: 2px solid rgb(255, 69, 0);
     padding: 10px 20px;
     font-size: 500px;
     cursor: pointer;
@@ -182,6 +196,7 @@ iframe{
 }
 #Rep{
     font-size: 90px;
+    text-align: center;
 }
 #restartBtn{
     width: 550px;
