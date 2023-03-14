@@ -33,7 +33,7 @@
         var counter = setInterval(timer, 1000);
         function timer(){
             count = count - 1;
-            if(count <= 0){
+            if(count == 0){
                 clearInterval(counter);
                 document.getElementById("results").innerHTML = "Start";
                 // make the count numbers bigger.
@@ -57,8 +57,9 @@
     var  counter = 0
     //check if event.gamma is less than -88 and if it is then count up to 10, for it to count up again event.gamma needs to be greater than -2 and then less than -88 again
     function counteUp(event){
-        if(event.gamma == -90){
+        if(event.gamma < -89){
             if(counter < 10){
+                console.log(event.gamma);
                 counter++;
                 statement = true;
                 document.getElementById("results").innerHTML = counter;
@@ -88,15 +89,6 @@
             resetBtn.style.display = "block";
             selectionBtn.style.display = "block";
             
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    var response = JSON.parse(xhttp.responseText);
-                    var savedCounter = response.counter;
-                    // Show the saved counter number on the page
-                    document.getElementById("totalReps").innerHTML = savedCounter;
-                }
-            };
 
         }else{
             navigator.vibrate(100);

@@ -86,15 +86,6 @@ function vibrate(){
         resetBtn.style.display = "block";
         selectionBtn.style.display = "block";
         
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                var response = JSON.parse(xhttp.responseText);
-                var savedCounter = response.counter;
-                // Show the saved counter number on the page
-                document.getElementById("totalReps").innerHTML = savedCounter;
-            }
-        };
 
     }else{
         navigator.vibrate(100);
