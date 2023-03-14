@@ -1,20 +1,22 @@
 {
     "name": "Two scoopes",
     "short_name": "Two scoopes",
-    "start_url": ".",
-    "background_color": "#6dcdb1",
-    "theme_color": "#009578",
+    "start_url": "/index.html",
+    "background_color": "#363535",
+    "theme_color": "#F04923",
     "display": "standalone",
     "icons": [
         {
-           "src": "images/piano3.png",
+           "src": "images/scoops_512.png",
            "sizes": "512x512",
-           "type": "image/png"
+           "type": "image/png",
+           "purpose": "any maskable"
         },
         {
-            "src": "images/piano192.png",
+            "src": "images/Scoopes_192.png",
             "sizes": "192x192",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
          }
     ]
 }

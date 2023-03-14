@@ -57,8 +57,8 @@
     var  counter = 0
     //check if event.gamma is less than -88 and if it is then count up to 10, for it to count up again event.gamma needs to be greater than -2 and then less than -88 again
     function counteUp(event){
-        console.log(event.gamma);
-       /* if(event.gamma < -90){
+        //console.log(event.gamma);
+        if(event.gamma > 89){
             if(counter < 10){
                 console.log(event.gamma);
                 counter++;
@@ -75,7 +75,7 @@
                 statement = false;
 
             }
-        }*/
+        }
     }
 
     // everytime the counter goes up by one vibrare the phone and when the counter reaches 10 then vibrate the phone 2 times

@@ -1,17 +1,49 @@
-self.addEventListener("install", e =>{
-    e.waitUntil(
-        caches.open("static").then(Cache =>{
-            return Cache.addAll(["./", "./css/main.css", "./images/Piano192.png"]);
-        })
-    );
+const cacheName = 'news-v1';
+const staticAssets = [
+  './',
+  './index.html',
+  './Css/test.css',
+  './Motion.js',
+  './Css/choise.css',
+  './js/animation.js',
+  "./images/blur_strong.jpg"
+];
+
+self.addEventListener('install', async e => {
+  const cache = await caches.open(cacheName);
+  await cache.addAll(staticAssets);
+  return self.skipWaiting();
 });
 
-// fetching det som finns i response som då är filerna i cacheAll ovan.
-self.addEventListener("fetch", e =>{
-    //console.log(`Intercepting fetch request for: ${e.request.url}`);
-    e.respondWith(
-        caches.match(e.request).then(response =>{
-            return response || fetch(e.request);
-        })
-    );
+self.addEventListener('activate', e => {
+  self.clients.claim();
 });
+
+self.addEventListener('fetch', async e => {
+  const req = e.request;
+  const url = new URL(req.url);
+
+  if (url.origin === location.origin) {
+    e.respondWith(cacheFirst(req));
+  } else {
+    e.respondWith(networkAndCache(req));
+  }
+});
+
+async function cacheFirst(req) {
+  const cache = await caches.open(cacheName);
+  const cached = await cache.match(req);
+  return cached || fetch(req);
+}
+
+async function networkAndCache(req) {
+  const cache = await caches.open(cacheName);
+  try {
+    const fresh = await fetch(req);
+    await cache.put(req, fresh.clone());
+    return fresh;
+  } catch (e) {
+    const cached = await cache.match(req);
+    return cached;
+  }
+}
