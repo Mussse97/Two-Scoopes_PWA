@@ -47,30 +47,25 @@
 
     
     function handleOrientation(event){
-        //var output=document.getElementById("output");
-        //simpleOutput(event, output);
         
         counteUp(event);
     }
         
 
     var  counter = 0
-    //check if event.gamma is less than -88 and if it is then count up to 10, for it to count up again event.gamma needs to be greater than -2 and then less than -88 again
     function counteUp(event){
-        //console.log(event.gamma);
+        
         if(event.gamma > 89){
             if(counter < 10){
-                console.log(event.gamma);
+                console.log(event);
                 counter++;
                 statement = true;
                 document.getElementById("results").innerHTML = counter;
                 vibrate();
                 document.getElementById("results").style.fontSize = "200px";
-                // everytime the counter goes up make the body element border turn green and then back to original color
-
                 document.body.style.border = "5px solid green";
                 setTimeout(function(){ document.body.style.border = "5px solid orangered"; }, 500);
-                // if statement is true counter cant go up anymore, counter need to be false again
+            
             }else{
                 statement = false;
 
@@ -78,7 +73,6 @@
         }
     }
 
-    // everytime the counter goes up by one vibrare the phone and when the counter reaches 10 then vibrate the phone 2 times
     function vibrate(){
         if(counter == 10){
             navigator.vibrate(1000);

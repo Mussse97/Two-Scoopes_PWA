@@ -36,7 +36,6 @@ function countdown(){
         if(count <= 0){
             clearInterval(counter);
             document.getElementById("results").innerHTML = "Start";
-            // make the count numbers bigger.
             document.getElementById("results").style.fontSize = "80px";
             return;
         }
@@ -47,14 +46,11 @@ function countdown(){
 
 
 function handleOrientation(event){
-    //var output=document.getElementById("output");
-    //simpleOutput(event, output);
     counteUp(event);
 }
     
 
 var  counter = 0
-// make an function if statement that says that event.gamma needs to be -90 and event.beta need to be -180
 function counteUp(event){
     if(event.gamma == 0 && event.beta == -180){
         if(counter < 10){
@@ -63,11 +59,9 @@ function counteUp(event){
             document.getElementById("results").innerHTML = counter;
             vibrate();
             document.getElementById("results").style.fontSize = "200px";
-            // everytime the counter goes up make the body element border turn green and then back to original color
-
             document.body.style.border = "5px solid green";
             setTimeout(function(){ document.body.style.border = "5px solid orangered"; }, 500);
-            // if statement is true counter cant go up anymore, counter need to be false again
+            
         }else{
             statement = false;
 
@@ -75,7 +69,7 @@ function counteUp(event){
     }
 }
 
-// everytime the counter goes up by one vibrare the phone and when the counter reaches 10 then vibrate the phone 2 times
+
 function vibrate(){
     if(counter == 10){
         navigator.vibrate(1000);

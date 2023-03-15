@@ -1,11 +1,13 @@
-if ("serviceWorker" in navigator){
-navigator.serviceWorker.register("sw.js").then(registration =>{
-    console.log("SW Registered!");
-    console.log(registration);
-}).catch(error =>{
-    console.log("SW Registration Faild!");
-    console.log(error);
-});
 
-}
-
+function sendNotification() {
+    var currentTime = new Date().getTime();
+    var oneHourTime = 60 * 60 * 1000;
+    var lastVisitTime = localStorage.getItem('lastVisitTime');
+  
+    if (currentTime - (lastVisitTime * 60) > oneHourTime) {
+      localStorage.setItem('lastVisitTime', currentTime);
+      alert("Du har inte varit aktiv på ett tag, vill du börja träna?");
+    }
+  }
+  
+  window.onload = sendNotification;
