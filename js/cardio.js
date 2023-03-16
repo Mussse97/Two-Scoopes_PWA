@@ -64,9 +64,11 @@ function counteUp(event){
             document.getElementById("results").style.fontSize = "200px";
             document.body.style.border = "5px solid green";
             setTimeout(function(){ document.body.style.border = "5px solid orangered"; }, 500);
-            statement = false;
-        }else{
-            statement = false;
+            console.log(statement);
+        if(statement == true){
+            //make statement false after 0.5 second.
+            setTimeout(function(){ statement = false; }, 500);
+        }
 
         }
     }
