@@ -13,7 +13,7 @@ tapme();
 }
 
 window.addEventListener("load", init);
-//window.addEventListener('deviceorientation', handleOrientation)
+
 
 
 function tapme(){
@@ -46,7 +46,6 @@ function countdown(){
 
 function handleOrientation(event){
     counteUp(event);
-    //console.log(event.beta, event.alpha);
 }
     
 
@@ -55,7 +54,6 @@ function counteUp(event){
     if(event.beta > 102 && event.alpha > 300 && !statement){ 
         if(counter < 10){
 
-            console.log(event.beta, event.alpha);
             counter++;
             statement = true;
             document.getElementById("results").innerHTML = counter;
@@ -64,11 +62,13 @@ function counteUp(event){
             document.body.style.border = "5px solid green";
             setTimeout(function(){ document.body.style.border = "5px solid orangered"; }, 500);
             console.log(statement);
-       
+
+       if(statement == true){
             setTimeout(function(){ statement = false; }, 500);
         
 
         }
+    }
     }
 }
 

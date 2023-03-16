@@ -13,7 +13,6 @@
     }
 
     window.addEventListener("load", init);
-    //window.addEventListener('deviceorientation', handleOrientation)
 
 
     function tapme(){
@@ -36,7 +35,6 @@
             if(count == 0){
                 clearInterval(counter);
                 document.getElementById("results").innerHTML = "Start";
-                // make the count numbers bigger.
                 document.getElementById("results").style.fontSize = "80px";
                 return;
             }
@@ -49,7 +47,6 @@
     function handleOrientation(event){
         
         counteUp(event);
-        console.log(event.gamma);
     }
         
 
@@ -67,14 +64,10 @@
                 document.body.style.border = "5px solid green";
                 setTimeout(function(){ document.body.style.border = "5px solid orangered"; }, 500);
           
+                if(statement == true){
                  setTimeout(function(){ statement = false; }, 500);
 
-           
-
-
-            }else{
-                statement = false;
-
+                }
             }
         }
     }
