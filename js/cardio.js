@@ -46,14 +46,15 @@ function countdown(){
 
 function handleOrientation(event){
     counteUp(event);
-    console.log(event.beta, event.alpha);
+    //console.log(event.beta, event.alpha);
 }
     
 
 var  counter = 0
 function counteUp(event){
-    if(event.beta < 90 && event.alpha < 150){
+    if(event.beta > 90 && event.alpha > 150){
         if(counter < 10){
+            console.log(event.beta, event.alpha);
             counter++;
             statement = true;
             document.getElementById("results").innerHTML = counter;
