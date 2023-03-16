@@ -52,7 +52,7 @@ function handleOrientation(event){
 
 var  counter = 0
 function counteUp(event){
-    if(event.beta == 90 && event.alpha == -90){
+    if(event.beta < 90 && event.alpha < 150){
         if(counter < 10){
             counter++;
             statement = true;
