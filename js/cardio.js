@@ -78,7 +78,7 @@ function vibrate(){
         navigator.vibrate(1000);
         document.getElementById("results").style.backgroundColor = "green";
         document.getElementById("results").innerHTML = "✓";
-        document.getElementById("congratz").innerHTML = "Congratz you did it!";
+        document.getElementById("congratz").innerHTML = "Congratulations you did it!";
         document.getElementById("congratz").style.fontSize = "80px";
         resetBtn.style.display = "block";
         selectionBtn.style.display = "block";
