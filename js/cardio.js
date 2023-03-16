@@ -52,8 +52,10 @@ function handleOrientation(event){
 
 var  counter = 0
 function counteUp(event){
-    if(event.beta > 102 && event.alpha > 290){
+    if(event.beta > 102 && event.alpha > 290 && !statement){ 
         if(counter < 10){
+            // make is so that this if statement is only true once.
+
             console.log(event.beta, event.alpha);
             counter++;
             statement = true;
