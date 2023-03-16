@@ -46,6 +46,7 @@ function countdown(){
 
 function handleOrientation(event){
     counteUp(event);
+    console.log(event.beta, event.alpha);
 }
     
 
