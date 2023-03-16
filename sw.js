@@ -6,7 +6,8 @@ const staticAssets = [
   './Motion.js',
   './Css/choise.css',
   './js/animation.js',
-  "./images/blur_strong.jpg"
+  "./images/blur_strong.jpg",
+  "./choise.html",
 ];
 
 self.addEventListener('install', async e => {

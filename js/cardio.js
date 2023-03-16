@@ -1,5 +1,4 @@
-var totalReps = 0;
-var totalSesions = 0;
+
 var statement = false;
 
 function init(){
@@ -22,7 +21,7 @@ function tapme(){
     
 }
 
-
+ 
 
 function countdown(){
     document.getElementById("tapme2").style.display = "none";
@@ -52,7 +51,7 @@ function handleOrientation(event){
 
 var  counter = 0
 function counteUp(event){
-    if(event.gamma == 0 && event.beta == -180){
+    if(event.beta == 90 && event.alpha == -90){
         if(counter < 10){
             counter++;
             statement = true;

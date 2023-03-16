@@ -1,5 +1,4 @@
-    var totalReps = 0;
-    var totalSesions = 0;
+
     var statement = false;
     
     function init(){
@@ -27,6 +26,7 @@
     function countdown(){
         document.getElementById("tapme").style.display = "none";
         document.getElementById("giffy").style.display = "none";
+        document.getElementById("explain").style.display = "none";
         document.getElementById("Rep").innerHTML = "Reps";
 
         var count = 5;
@@ -55,7 +55,7 @@
     var  counter = 0
     function counteUp(event){
         
-        if(event.gamma > 89){
+        if(event.gamma > 88){
             if(counter < 10){
                 console.log(event);
                 counter++;
@@ -79,7 +79,7 @@
             navigator.vibrate(1000);
             document.getElementById("results").style.backgroundColor = "green";
             document.getElementById("results").innerHTML = "✓";
-            document.getElementById("congratz").innerHTML = "Congratz you did it!";
+            document.getElementById("congratz").innerHTML = "Congratulations you did it!";
             document.getElementById("congratz").style.fontSize = "80px";
             resetBtn.style.display = "block";
             selectionBtn.style.display = "block";
