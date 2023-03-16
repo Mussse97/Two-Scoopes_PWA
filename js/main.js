@@ -7,7 +7,7 @@ function sendNotification() {
       localStorage.setItem('lastVisitTime', currentTime);
       var notification = new Notification('Training', {
         body: 'You have not been active in a while, start your training now',
-        icon: 'imgages/scoops_512.png'
+        icon: 'images/scoops_512.png'
       });
       notification.onclick = (e) => {
         windows.location.href = 'choise.html';

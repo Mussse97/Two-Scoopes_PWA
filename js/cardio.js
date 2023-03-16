@@ -54,7 +54,6 @@ var  counter = 0
 function counteUp(event){
     if(event.beta > 102 && event.alpha > 300 && !statement){ 
         if(counter < 10){
-            // make is so that this if statement is only true once.
 
             console.log(event.beta, event.alpha);
             counter++;
@@ -65,10 +64,9 @@ function counteUp(event){
             document.body.style.border = "5px solid green";
             setTimeout(function(){ document.body.style.border = "5px solid orangered"; }, 500);
             console.log(statement);
-        if(statement == true){
-            //make statement false after 0.5 second.
+       
             setTimeout(function(){ statement = false; }, 500);
-        }
+        
 
         }
     }

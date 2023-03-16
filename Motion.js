@@ -56,9 +56,9 @@
     var  counter = 0
     function counteUp(event){
         
-        if(event.gamma > 88){
+        if(event.gamma > 88 && !statement){
             if(counter < 10){
-                console.log(event);
+    
                 counter++;
                 statement = true;
                 document.getElementById("results").innerHTML = counter;
@@ -66,7 +66,12 @@
                 document.getElementById("results").style.fontSize = "200px";
                 document.body.style.border = "5px solid green";
                 setTimeout(function(){ document.body.style.border = "5px solid orangered"; }, 500);
+          
+                 setTimeout(function(){ statement = false; }, 500);
+
            
+
+
             }else{
                 statement = false;
 
