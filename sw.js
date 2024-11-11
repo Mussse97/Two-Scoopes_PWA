@@ -1,4 +1,5 @@
 const cacheName = 'news-v1';
+// Filer som kan sparas i network
 const staticAssets = [
   './',
   './index.html',

@@ -49,7 +49,7 @@
         counteUp(event);
     }
         
-
+// dumbell movement
     var  counter = 0
     function counteUp(event){
         
