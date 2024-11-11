@@ -4,7 +4,7 @@ const staticAssets = [
   './',
   './index.html',
   './Css/test.css',
-  './Motion.js',
+  './js/Motion.js',
   './Css/choise.css',
   './js/animation.js',
   "./images/blur_strong.jpg",
