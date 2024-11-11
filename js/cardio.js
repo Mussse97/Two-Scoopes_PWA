@@ -88,7 +88,7 @@ function vibrate(){
         navigator.vibrate(100);
     }
 }
-
+// window?!
 function reset(){
     location.reload();
 }

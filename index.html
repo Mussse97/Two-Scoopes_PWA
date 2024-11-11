@@ -4,14 +4,20 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="theme-color" content="#009578">
+      
     <title>TSFH</title>
     <link rel="stylesheet" href="Css/test.css">
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="images/Piano192.png">
    <script type="text/javascript" src="js/main.js"></script>
     </head>
+    <script>
+      if("serviceWorker" in navigator){
+        navigator.serviceWorker.register("/sw.js");
+      }
+    </script>
     <body>
-      <div class="header">
+      <article class="header">
         <h1 id="firstlogo" >Two Sc<span>oo</span>ps</h1>
 
         <nav class="navbar">
@@ -19,25 +25,25 @@
             <p id="showReps"></p>
             
           </nav>
-    </div>
+      </article>
 
-    <div class="home">
-      <div class="main-home">
-          <div class="inner-content">
+    <article class="home">
+      <section class="main-home">
+          <section class="inner-content">
               <h1> MAKE YOUR BODY <br> <span>BEAUTIFUL</span></h1>
               <p>We create and give you perfect training</p>
 
-              <div class="body-btn">
+              <section class="body-btn">
                   <a href="choise.html">Start training!</a>
-              </div>
-          </div>
+              </section>
+          </section>
 
 
-          <div class="inner-content">
+          <section class="inner-content">
               
-          </div>
-      </div>
-  </div>
+          </section>
+      </section>
+    </article>
 
     </nav>
     </body>

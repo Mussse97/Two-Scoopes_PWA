@@ -1,4 +1,4 @@
-
+// Test js av notifikationer för mobilen
 function sendNotification() {
     var currentTime = new Date().getTime();
     var oneHourTime = 60 * 60 * 1000;

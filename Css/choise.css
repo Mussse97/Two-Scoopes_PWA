@@ -12,12 +12,13 @@ h2, h1{
     padding: 0;
     font-size: 45px;
 }
-section{
+article, section{
     display: grid;
     place-items: center;
     align-items: center;
-    min-height: 90vh;
+    min-height: 100vh;
 }
+
 p{
     font-size: 24px;
 }
