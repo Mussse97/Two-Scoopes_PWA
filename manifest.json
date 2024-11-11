@@ -1,7 +1,7 @@
 {
     "name": "Two scoopes",
     "short_name": "Two scoopes",
-    "start_url": "index.html",
+    "start_url": "/Two-Scoopes_PWA/index.html",
     "background_color": "#363535",
     "theme_color": "#F04923",
     "display": "standalone",
