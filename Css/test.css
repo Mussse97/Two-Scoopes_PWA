@@ -98,7 +98,7 @@ span{
 
 .home{
     padding: 1rem 7%;
-    background-image: url("/Two-Scoopes_PWA/images/blur_strong.jpg");
+    background-image: url("images/blur_strong.png");
     background-size: cover;
     background-position: center;
     min-height: 100vh;
