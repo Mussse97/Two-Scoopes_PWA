@@ -6,7 +6,7 @@ const staticAssets = [
    './js/Motion.js',
    './Css/choise.css',
    './js/animation.js',
-   './images/blur_strong.jpg',
+   './images/blur_strong.png',
    './choise.html',
 ];
 
